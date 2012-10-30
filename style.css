@@ -1,0 +1,70 @@
+@font-face {
+  font-family: handwriting;
+  src: url(fonts/TidyHand.woff) format("woff"),
+       url(fonts/TidyHand.eot) format("embedded-opentype"),
+       url(fonts/TidyHand.ttf) format("truetype");
+}
+
+body {
+  background: #382720;
+  color: white;
+}
+
+a { text-decoration: none; color: #99f }
+a:visited { color: #f9f }
+a:hover { text-decoration: underline }
+
+#ScreenHolder {
+    position:absolute;
+    left: 232px;
+    top: 60px;
+    width: 320px;
+    height: 200px;
+    display:inline-block;
+}
+
+#HighScores {
+  color: black;
+  position:absolute;
+  left:  507px;
+  top:   280px;
+}
+
+#HighScores h4 {
+  font: 14pt handwriting,sans-serif;
+  font-weight: normal;
+  margin: 0 0 10px 0;
+}
+
+#HighScores table {
+  font: 10pt handwriting,sans-serif;
+  line-height: 100%;
+  color: black;
+  width: 180px;
+}
+
+#HighScores table td.position {
+  text-align: right
+}
+#HighScores table td.name {
+  text-align: left;
+  max-width: 120;
+  white-space: nowrap;
+  overflow: hidden;
+}
+#HighScores table td.score {
+  text-align: right;
+}
+
+#FpsHolder {
+  font-size: 8pt;
+}
+
+.TopLeft { position: absolute; left: 0px; top: 0px }
+
+p.credits {
+    text-align: center;
+    font: 8pt sans-serif;
+    color: #806040;
+}
+p.credits a { color: #a08040 }

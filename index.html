@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-type" content="text/html;charset=utf-8">
+<title>Paratrooper on a JavaScript PC emulator</title>
+<link rel="icon" type="image/png" href="img/icon.png">
+<link rel="stylesheet" type="text/css" href="style.css" >
+</head>
+<body onload="initialize()">
+<script type="text/javascript">
+function elem(id) { return document.getElementById(id) }
+</script>
+<div style="text-align:center">
+  <div style="display:inline-block;position:relative;width:800;height:640">
+    <img src="img/pc.png" width="800" height="640" alt="IBM PC">
+      <div id="ScreenHolder"
+        onmouseover="elem('ScreenIcons').style.visibility='visible'"
+        onmouseout="elem('ScreenIcons').style.visibility='hidden'">
+        <div id="Screen" class="TopLeft"></div>
+        <div id="ScreenIcons" style="visibility:hidden" class="TopLeft">
+          <div id="Icons">
+            <img id="ToggleFullscreen" onclick="toggleFullscreen()" src="img/fs-on.png" width="32" height="32" alt="Fullscreen" title="Toggle fullscreen mode">
+            <img id="ToggleMuted" onclick="toggleMuted()" src="img/muted-off.png" width="32" height="32" alt="Mute" title="Toggle audio muted">
+            <div id="FpsHolder"><span id="Fps">0</span> FPS</div>
+          </div>
+        </div>
+      </div>
+    <div id="HighScores"><h4>High Scores</h4><table id="HighScoresTable"></table></div>
+  </div>
+</div>
+<p class="credits">
+  Paratrooper originally by <a href="http://www.math.ucdavis.edu/~greg/">Greg Kuperberg</a>.
+  PC emulator by <a href="mailto:maksverver@geocities.com">Maks Verver</a>.
+  <br>
+  IBM PC photo by <a href="http://www.vintage-computer.com/">Eric S. Klein</a>.
+  <span style="font-family:handwriting">Tidy Hand</span> font by <a href="http://www.niceandripe.com/fonts/">Sean Johnson</a>.
+  Icons from the <a href="http://tango.freedesktop.org/Tango_Icon_Library">Tango Desktop Project</a>.
+</p>
+
+<div id="FullScreenHolder" style="position:absolute;left:0;top:0;right:0;bottom:0;background:black;visibility:hidden">
+  <div id="FullScreen" style="position:absolute;left:0;top:0;right:0;bottom:0"></div>
+  <div class="TopLeft" style="padding:8px"
+    onmouseover="elem('FullScreenIcons').style.visibility='visible'"
+    onmouseout="elem('FullScreenIcons').style.visibility='hidden'">
+    <div id="FullScreenIcons" style="visibility:hidden"></div>
+  </div>
+</div>
+
+<script type="text/javascript" src="font.js"></script>
+<script type="text/javascript" src="memory.js"></script>
+<script type="text/javascript" src="decoder.js"></script>
+<script type="text/javascript" src="emulator.js"></script>
+<script type="text/javascript" src="ajax.js"></script>
+<script type="text/javascript" src="postback.js"></script>
+<script type="text/javascript" src="main.js"></script>
+</body>
+</html>
